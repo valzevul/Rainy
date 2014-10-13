@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Current {
-    var rainProbability3h: Double
+    var rainProbability3h: Double?
     var location: String
     var description: String?
     var windSpeed: Double
@@ -21,13 +21,17 @@ struct Current {
     var icon: UIImage?
     
     init(weatherDictionary: NSDictionary) {
-        let rainDict = weatherDictionary["rain"] as NSDictionary
+        let rainDict = weatherDictionary["rain"] as NSDictionary?
         let currentWeatherDict = weatherDictionary["main"] as NSDictionary
         let currentWindDict = weatherDictionary["wind"] as NSDictionary
         let weatherDescription = weatherDictionary["weather"] as NSArray
         println(currentWindDict)
         
-        rainProbability3h = rainDict["3h"] as Double
+        if rainDict != nil {
+            rainProbability3h = rainDict!["3h"] as? Double }
+        else {
+            rainProbability3h = -1 // There is no info
+        }
         description = weatherDescription[0]["main"] as? String
         var name = weatherDescription[0]["icon"] as String
         location = weatherDictionary["name"] as String

@@ -64,7 +64,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         // Update UI with the weather
                         self.temperatureLabel.text = "\(Int(currentWeather.temperature!))"
                         self.locationLabel.text = "in \(currentWeather.location)"
-                        self.rainProbabilityLabel.text = "\(currentWeather.rainProbability3h)"
+                        self.rainProbabilityLabel.text = "\(currentWeather.rainProbability3h!)"
                         self.weatherImage.image = currentWeather.icon
                         self.timeLabel.text = "At \(currentWeather.time!) it is"
                         self.windLabel.text = "\(currentWeather.windSpeed) m/s \(currentWeather.windDirection!)"
@@ -104,7 +104,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getCoordinates() -> Coordinates {
-        let result = Coordinates(latitude: 35, longitude: 139) // For test purposes only
+        let result = Coordinates(latitude: 37.62, longitude: 55.75) // For test purposes only
         return result
         // return coordinates
     }
