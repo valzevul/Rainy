@@ -12,7 +12,8 @@ import UIKit
 struct Current {
     var rainProbability3h: Double
     var location: String
-    var description: String
+    var description: String?
+
     var temperature: Double?
     var time: String?
     var icon: UIImage?
@@ -20,14 +21,16 @@ struct Current {
     init(weatherDictionary: NSDictionary) {
         let rainDict = weatherDictionary["rain"] as NSDictionary
         let currentWeatherDict = weatherDictionary["main"] as NSDictionary
-        let currentDescriptionDict = weatherDictionary["weather"] as NSDictionary
+        let weatherDescription = weatherDictionary["weather"] as NSArray
         
-        description = currentWeatherDict["main"] as String
-        location = weatherDictionary["name"] as String
         rainProbability3h = rainDict["3h"] as Double
+        description = weatherDescription[0]["main"] as? String
+        var name = weatherDescription[0]["icon"] as String
+        location = weatherDictionary["name"] as String
+        
         temperature = celciusFromKelvin(currentWeatherDict["temp"] as Double)
         time = dateStringFromUnixTime(weatherDictionary["dt"] as Int)
-        icon = weatherIconFromString(currentWeatherDict["icon"] as String)
+        icon = weatherIconFromString(name)
     }
     
     func dateStringFromUnixTime(unixTime: Int) -> String {
