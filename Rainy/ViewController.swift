@@ -24,6 +24,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var reloadButton: UIButton!
+    @IBOutlet weak var reloadActivityIndicator: UIActivityIndicatorView!
+    
+    
     private var coordinates : Coordinates = Coordinates()
     private var locationManager : CLLocationManager = CLLocationManager()
     private var geocoder : CLGeocoder = CLGeocoder()
@@ -32,6 +36,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.reloadActivityIndicator.hidden = true
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -63,6 +68,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         self.weatherImage.image = currentWeather.icon
                         self.timeLabel.text = "At \(currentWeather.time!) it is"
                         self.windLabel.text = "\(currentWeather.windSpeed) m/s \(currentWeather.windDirection!)"
+                        
+                        self.reloadActivityIndicator.stopAnimating()
+                        self.reloadActivityIndicator.hidden = true
+                        self.reloadButton.hidden = false
                     })
                     
                 } else {
@@ -78,6 +87,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         // Update UI with the weather
                         // Stop activity button
+                        self.reloadButton.hidden = false
+                        self.reloadActivityIndicator.hidden = true
+                        self.reloadActivityIndicator.stopAnimating()
                     })
                     
                 }
@@ -116,6 +128,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
 
+    @IBAction func didReload(sender: AnyObject) {
+        reloadButton.hidden = true
+        reloadActivityIndicator.hidden = false
+        reloadActivityIndicator.startAnimating()
+        
+        getCurrentWeatherData()
+        
+        
+    }
+    
+    
     
 }
 

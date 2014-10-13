@@ -54,18 +54,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-dO-g3M">
-                                <rect key="frame" x="226" y="506" width="51" height="23"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 m/s →" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpc-yD-LD1">
                                 <rect key="frame" x="24" y="506" width="96" height="23"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-dO-g3M">
+                                <rect key="frame" x="226" y="506" width="51" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-ue-vt1">
+                                <rect key="frame" x="130" y="28" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Nia-59-SZE"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ul3-cQ-zjD"/>
+                                </constraints>
+                                <state key="normal" image="reload">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didReload:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fzt-sB-udr"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JMh-be-PBq">
+                                <rect key="frame" x="150" y="48" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -73,23 +89,29 @@
                             <constraint firstItem="SdN-dO-g3M" firstAttribute="top" secondItem="PVF-zl-7iO" secondAttribute="bottom" constant="13" id="1XE-JK-kOX"/>
                             <constraint firstItem="e84-Ty-aNL" firstAttribute="top" secondItem="Zyc-Hh-x44" secondAttribute="bottom" constant="-1" id="2xT-ek-qUq"/>
                             <constraint firstItem="xpc-yD-LD1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="8" id="3Ri-z5-Ski"/>
+                            <constraint firstItem="7cc-ue-vt1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="3fA-Ir-b1H"/>
                             <constraint firstAttribute="centerY" secondItem="e84-Ty-aNL" secondAttribute="centerY" id="HhH-Ee-dnc"/>
                             <constraint firstAttribute="centerX" secondItem="tya-WN-JPO" secondAttribute="centerX" constant="-0.5" id="Ii1-wa-iVf"/>
+                            <constraint firstAttribute="centerX" secondItem="7cc-ue-vt1" secondAttribute="centerX" id="MGF-go-Aw4"/>
                             <constraint firstItem="HD3-ft-kre" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="28" id="SqI-Zz-I7O"/>
                             <constraint firstItem="PVF-zl-7iO" firstAttribute="top" secondItem="e84-Ty-aNL" secondAttribute="bottom" constant="99" id="Udi-mW-cts"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SdN-dO-g3M" secondAttribute="trailing" constant="27" id="Vq3-Qd-ilw"/>
                             <constraint firstItem="BNz-Fh-p8e" firstAttribute="leading" secondItem="e84-Ty-aNL" secondAttribute="trailing" constant="-13" id="XSZ-HE-5Aj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PVF-zl-7iO" secondAttribute="trailing" constant="25" id="YfJ-wM-Heh"/>
+                            <constraint firstItem="JMh-be-PBq" firstAttribute="centerX" secondItem="7cc-ue-vt1" secondAttribute="centerX" id="d3Z-rn-2de"/>
                             <constraint firstItem="xpc-yD-LD1" firstAttribute="top" secondItem="HD3-ft-kre" secondAttribute="bottom" constant="13" id="hLK-EY-X31"/>
                             <constraint firstItem="e84-Ty-aNL" firstAttribute="top" secondItem="BNz-Fh-p8e" secondAttribute="bottom" constant="-53" id="hkl-5m-PHd"/>
                             <constraint firstAttribute="centerX" secondItem="e84-Ty-aNL" secondAttribute="centerX" constant="-0.5" id="peL-oj-Tha"/>
                             <constraint firstItem="tya-WN-JPO" firstAttribute="top" secondItem="e84-Ty-aNL" secondAttribute="bottom" constant="-4" id="tgb-xE-vpK"/>
+                            <constraint firstItem="JMh-be-PBq" firstAttribute="centerY" secondItem="7cc-ue-vt1" secondAttribute="centerY" id="w4E-OT-rUc"/>
                             <constraint firstAttribute="centerX" secondItem="Zyc-Hh-x44" secondAttribute="centerX" constant="-0.5" id="yjk-FT-RjR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="locationLabel" destination="tya-WN-JPO" id="4PA-2H-tnx"/>
                         <outlet property="rainProbabilityLabel" destination="SdN-dO-g3M" id="GgH-Pw-IgX"/>
+                        <outlet property="reloadActivityIndicator" destination="JMh-be-PBq" id="pUj-dR-8mr"/>
+                        <outlet property="reloadButton" destination="7cc-ue-vt1" id="Y5N-MN-Ztk"/>
                         <outlet property="temperatureLabel" destination="e84-Ty-aNL" id="Vtn-p9-TBY"/>
                         <outlet property="timeLabel" destination="Zyc-Hh-x44" id="63W-zq-GYD"/>
                         <outlet property="weatherImage" destination="BNz-Fh-p8e" id="w0k-FK-k9n"/>
@@ -103,6 +125,7 @@
     </scenes>
     <resources>
         <image name="01d" width="50" height="50"/>
+        <image name="reload" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
