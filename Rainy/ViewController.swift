@@ -21,6 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var rainProbabilityLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
     
+    @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
     private var coordinates : Coordinates = Coordinates()
@@ -61,6 +62,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         self.rainProbabilityLabel.text = "\(currentWeather.rainProbability3h)"
                         self.weatherImage.image = currentWeather.icon
                         self.timeLabel.text = "At \(currentWeather.time!) it is"
+                        self.windLabel.text = "\(currentWeather.windSpeed) m/s \(currentWeather.windDirection!)"
                     })
                     
                 } else {
