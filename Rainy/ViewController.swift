@@ -39,7 +39,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if (error == nil) {
                     let dataObject = NSData(contentsOfURL: location)
                     let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSDictionary
-                    
+                    println(weatherDictionary)
+                    let currentWeather = Current(weatherDictionary: weatherDictionary)
+
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         // Update UI with the weather
                     })

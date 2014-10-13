@@ -14,6 +14,7 @@
 		82CFB92019EBD173006517E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82CFB91F19EBD173006517E3 /* Images.xcassets */; };
 		82CFB92319EBD173006517E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CFB92119EBD173006517E3 /* LaunchScreen.xib */; };
 		82CFB92F19EBD173006517E3 /* RainyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFB92E19EBD173006517E3 /* RainyTests.swift */; };
+		82EA2E7719EBE1E90067D496 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EA2E7619EBE1E90067D496 /* Current.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		82CFB92819EBD173006517E3 /* RainyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CFB92D19EBD173006517E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82CFB92E19EBD173006517E3 /* RainyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainyTests.swift; sourceTree = "<group>"; };
+		82EA2E7619EBE1E90067D496 /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				82CFB91F19EBD173006517E3 /* Images.xcassets */,
 				82CFB92119EBD173006517E3 /* LaunchScreen.xib */,
 				82CFB91619EBD173006517E3 /* Supporting Files */,
+				82EA2E7619EBE1E90067D496 /* Current.swift */,
 			);
 			path = Rainy;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82EA2E7719EBE1E90067D496 /* Current.swift in Sources */,
 				82CFB91B19EBD173006517E3 /* ViewController.swift in Sources */,
 				82CFB91919EBD173006517E3 /* AppDelegate.swift in Sources */,
 			);
