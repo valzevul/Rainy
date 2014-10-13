@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		825BCFA219EBD445003FE05C /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 825BCFA119EBD445003FE05C /* configuration.plist */; };
 		82CFB91919EBD173006517E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFB91819EBD173006517E3 /* AppDelegate.swift */; };
 		82CFB91B19EBD173006517E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFB91A19EBD173006517E3 /* ViewController.swift */; };
 		82CFB91E19EBD173006517E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CFB91C19EBD173006517E3 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		825BCFA119EBD445003FE05C /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
 		82CFB91319EBD173006517E3 /* Rainy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CFB91719EBD173006517E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82CFB91819EBD173006517E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		82CFB90A19EBD173006517E3 = {
 			isa = PBXGroup;
 			children = (
+				825BCFA119EBD445003FE05C /* configuration.plist */,
 				82CFB91519EBD173006517E3 /* Rainy */,
 				82CFB92B19EBD173006517E3 /* RainyTests */,
 				82CFB91419EBD173006517E3 /* Products */,
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82CFB91E19EBD173006517E3 /* Main.storyboard in Resources */,
+				825BCFA219EBD445003FE05C /* configuration.plist in Resources */,
 				82CFB92319EBD173006517E3 /* LaunchScreen.xib in Resources */,
 				82CFB92019EBD173006517E3 /* Images.xcassets in Resources */,
 			);
