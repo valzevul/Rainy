@@ -19,7 +19,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var rainProbabilityLabel: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
     
+    @IBOutlet weak var timeLabel: UILabel!
     
     private var coordinates : Coordinates = Coordinates()
     private var locationManager : CLLocationManager = CLLocationManager()
@@ -29,6 +31,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         getCurrentWeatherData()
     }
     
@@ -50,8 +57,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         // Update UI with the weather
                         self.temperatureLabel.text = "\(Int(currentWeather.temperature!))"
-                        self.locationLabel.text = "\(currentWeather.location)"
+                        self.locationLabel.text = "in \(currentWeather.location)"
                         self.rainProbabilityLabel.text = "\(currentWeather.rainProbability3h)"
+                        self.weatherImage.image = currentWeather.icon
+                        self.timeLabel.text = "At \(currentWeather.time!) it is"
                     })
                     
                 } else {
@@ -83,7 +92,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func getCoordinates() -> Coordinates {
         let result = Coordinates(latitude: 35, longitude: 139) // For test purposes only
         return result
+        // return coordinates
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("didFailWithError %@", error)
+        var errorAlert : UIAlertView = UIAlertView(title: "Error", message: "Failed to get your location", delegate: nil, cancelButtonTitle: "OK")
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        var currentLocation : CLLocation = locations[0] as CLLocation
+        if (!currentLocation.isEqual(nil)) {
+            coordinates = Coordinates(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        }
+        locationManager.stopUpdatingLocation()
+    }
+
     
 }
 
