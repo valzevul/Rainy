@@ -17,6 +17,10 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+# Ignore file with API keys, for example information check out
+# configuration.plist.example
+*configuration.plist
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
