@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Because at the screen time of the last update will be provided
+        application.setStatusBarHidden(true, withAnimation: .None)
+        
         // Override point for customization after application launch.
         return true
     }

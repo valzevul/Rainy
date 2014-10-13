@@ -405,6 +405,7 @@
 				82CFB93419EBD173006517E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82CFB93519EBD173006517E3 /* Build configuration list for PBXNativeTarget "RainyTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				82CFB93719EBD173006517E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
