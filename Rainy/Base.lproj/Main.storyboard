@@ -15,8 +15,49 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e84-Ty-aNL">
+                                <rect key="frame" x="77" y="198" width="167" height="172"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="150"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moscow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tya-WN-JPO">
+                                <rect key="frame" x="120" y="130" width="81" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="RAIN?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-zl-7iO">
+                                <rect key="frame" x="226" y="415" width="56" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-dO-g3M">
+                                <rect key="frame" x="226" y="452" width="51" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SdN-dO-g3M" firstAttribute="top" secondItem="PVF-zl-7iO" secondAttribute="bottom" constant="13" id="1XE-JK-kOX"/>
+                            <constraint firstAttribute="centerY" secondItem="SdN-dO-g3M" secondAttribute="centerY" constant="-179.5" id="9nz-ct-MGT"/>
+                            <constraint firstAttribute="centerY" secondItem="e84-Ty-aNL" secondAttribute="centerY" id="HhH-Ee-dnc"/>
+                            <constraint firstAttribute="centerX" secondItem="tya-WN-JPO" secondAttribute="centerX" constant="-0.5" id="Ii1-wa-iVf"/>
+                            <constraint firstItem="e84-Ty-aNL" firstAttribute="top" secondItem="tya-WN-JPO" secondAttribute="bottom" constant="42" id="L3Y-Po-eqE"/>
+                            <constraint firstItem="PVF-zl-7iO" firstAttribute="top" secondItem="e84-Ty-aNL" secondAttribute="bottom" constant="45" id="Udi-mW-cts"/>
+                            <constraint firstAttribute="centerX" secondItem="e84-Ty-aNL" secondAttribute="centerX" constant="-0.5" id="peL-oj-Tha"/>
+                            <constraint firstAttribute="centerY" secondItem="PVF-zl-7iO" secondAttribute="centerY" constant="-143" id="xyn-bb-rse"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="tya-WN-JPO" id="4PA-2H-tnx"/>
+                        <outlet property="rainProbabilityLabel" destination="SdN-dO-g3M" id="GgH-Pw-IgX"/>
+                        <outlet property="temperatureLabel" destination="e84-Ty-aNL" id="Vtn-p9-TBY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

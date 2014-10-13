@@ -16,6 +16,11 @@ struct Coordinates {
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var rainProbabilityLabel: UILabel!
+    
+    
     private var coordinates : Coordinates = Coordinates()
     private var locationManager : CLLocationManager = CLLocationManager()
     private var geocoder : CLGeocoder = CLGeocoder()
@@ -44,6 +49,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         // Update UI with the weather
+                        self.temperatureLabel.text = "\(Int(currentWeather.temperature!))"
+                        self.locationLabel.text = "\(currentWeather.location)"
+                        self.rainProbabilityLabel.text = "\(currentWeather.rainProbability3h)"
                     })
                     
                 } else {
