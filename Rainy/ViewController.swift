@@ -41,8 +41,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
-        getCurrentWeatherData()
     }
     
     func getCurrentWeatherData() -> Void {
@@ -57,7 +55,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if (error == nil) {
                     let dataObject = NSData(contentsOfURL: location)
                     let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSDictionary
-                    println(weatherDictionary)
                     let currentWeather = Current(weatherDictionary: weatherDictionary)
 
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -101,12 +98,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func getApiKey() -> String {
         return ""  // For test purposes only
-    }
+    }  
     
     func getCoordinates() -> Coordinates {
-        let result = Coordinates(latitude: 37.62, longitude: 55.75) // For test purposes only
-        return result
-        // return coordinates
+        return coordinates
     }
     
     override func didReceiveMemoryWarning() {
@@ -124,6 +119,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         var currentLocation : CLLocation = locations[0] as CLLocation
         if (!currentLocation.isEqual(nil)) {
             coordinates = Coordinates(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+            getCurrentWeatherData()
         }
         locationManager.stopUpdatingLocation()
     }
