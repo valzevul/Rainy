@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82066BC119F58D3700A33097 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82066BC019F58D3700A33097 /* InfoViewController.swift */; };
 		825BCFA219EBD445003FE05C /* configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 825BCFA119EBD445003FE05C /* configuration.plist */; };
 		82CFB91919EBD173006517E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFB91819EBD173006517E3 /* AppDelegate.swift */; };
 		82CFB91B19EBD173006517E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CFB91A19EBD173006517E3 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82066BC019F58D3700A33097 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		825BCFA119EBD445003FE05C /* configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = configuration.plist; sourceTree = "<group>"; };
 		82CFB91319EBD173006517E3 /* Rainy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CFB91719EBD173006517E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				82CFB91819EBD173006517E3 /* AppDelegate.swift */,
 				82CFB91A19EBD173006517E3 /* ViewController.swift */,
 				82CFB91C19EBD173006517E3 /* Main.storyboard */,
+				82066BC019F58D3700A33097 /* InfoViewController.swift */,
 				82CFB91F19EBD173006517E3 /* Images.xcassets */,
 				82CFB92119EBD173006517E3 /* LaunchScreen.xib */,
 				82CFB91619EBD173006517E3 /* Supporting Files */,
@@ -221,6 +224,7 @@
 			files = (
 				82EA2E7719EBE1E90067D496 /* Current.swift in Sources */,
 				82CFB91B19EBD173006517E3 /* ViewController.swift in Sources */,
+				82066BC119F58D3700A33097 /* InfoViewController.swift in Sources */,
 				82CFB91919EBD173006517E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

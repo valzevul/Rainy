@@ -16,6 +16,9 @@ struct Coordinates {
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    
+    @IBOutlet weak var infoButton: UIButton!
+    
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var rainProbabilityLabel: UILabel!
@@ -130,9 +133,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         reloadActivityIndicator.startAnimating()
         
         getCurrentWeatherData()
-        
-        
     }
+    
+    @IBAction func infoButtonPressed(sender: UIButton) {
+    }
+    
     
     
     

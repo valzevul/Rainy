@@ -25,7 +25,6 @@ struct Current {
         let currentWeatherDict = weatherDictionary["main"] as NSDictionary
         let currentWindDict = weatherDictionary["wind"] as NSDictionary
         let weatherDescription = weatherDictionary["weather"] as NSArray
-        println(currentWindDict)
         
         if rainDict != nil {
             rainProbability3h = rainDict!["3h"] as? Double }
