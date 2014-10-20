@@ -29,8 +29,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-zl-7iO">
-                                <rect key="frame" x="223" y="469" width="56" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-zl-7iO">
+                                <rect key="frame" x="234" y="469" width="45" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,8 +48,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WIND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD3-ft-kre">
-                                <rect key="frame" x="44" y="469" width="56" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD3-ft-kre">
+                                <rect key="frame" x="44" y="469" width="51" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,10 +82,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-DI-Qn9">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-DI-Qn9">
+                                <rect key="frame" x="140" y="464" width="40" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="JDV-d0-VQ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="infoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VqW-tA-me0"/>
@@ -103,16 +108,20 @@
                             <constraint firstAttribute="centerY" secondItem="e84-Ty-aNL" secondAttribute="centerY" id="HhH-Ee-dnc"/>
                             <constraint firstAttribute="centerX" secondItem="tya-WN-JPO" secondAttribute="centerX" constant="-0.5" id="Ii1-wa-iVf"/>
                             <constraint firstAttribute="centerX" secondItem="7cc-ue-vt1" secondAttribute="centerX" id="MGF-go-Aw4"/>
+                            <constraint firstItem="RyF-DI-Qn9" firstAttribute="top" secondItem="tya-WN-JPO" secondAttribute="bottom" constant="72" id="Os6-0O-sAt"/>
                             <constraint firstItem="HD3-ft-kre" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="28" id="SqI-Zz-I7O"/>
                             <constraint firstItem="PVF-zl-7iO" firstAttribute="top" secondItem="e84-Ty-aNL" secondAttribute="bottom" constant="99" id="Udi-mW-cts"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SdN-dO-g3M" secondAttribute="trailing" constant="27" id="Vq3-Qd-ilw"/>
                             <constraint firstItem="BNz-Fh-p8e" firstAttribute="leading" secondItem="e84-Ty-aNL" secondAttribute="trailing" constant="-13" id="XSZ-HE-5Aj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PVF-zl-7iO" secondAttribute="trailing" constant="25" id="YfJ-wM-Heh"/>
+                            <constraint firstItem="RyF-DI-Qn9" firstAttribute="leading" secondItem="HD3-ft-kre" secondAttribute="trailing" constant="45" id="aJk-DI-PNO"/>
                             <constraint firstItem="JMh-be-PBq" firstAttribute="centerX" secondItem="7cc-ue-vt1" secondAttribute="centerX" id="d3Z-rn-2de"/>
                             <constraint firstItem="xpc-yD-LD1" firstAttribute="top" secondItem="HD3-ft-kre" secondAttribute="bottom" constant="13" id="hLK-EY-X31"/>
                             <constraint firstItem="e84-Ty-aNL" firstAttribute="top" secondItem="BNz-Fh-p8e" secondAttribute="bottom" constant="-53" id="hkl-5m-PHd"/>
                             <constraint firstAttribute="centerX" secondItem="e84-Ty-aNL" secondAttribute="centerX" constant="-0.5" id="peL-oj-Tha"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="RyF-DI-Qn9" secondAttribute="bottom" constant="75" id="qdC-zC-SwB"/>
                             <constraint firstItem="tya-WN-JPO" firstAttribute="top" secondItem="e84-Ty-aNL" secondAttribute="bottom" constant="-4" id="tgb-xE-vpK"/>
+                            <constraint firstItem="PVF-zl-7iO" firstAttribute="leading" secondItem="RyF-DI-Qn9" secondAttribute="trailing" constant="54" id="ugN-lD-Yop"/>
                             <constraint firstItem="JMh-be-PBq" firstAttribute="centerY" secondItem="7cc-ue-vt1" secondAttribute="centerY" id="w4E-OT-rUc"/>
                             <constraint firstAttribute="centerX" secondItem="Zyc-Hh-x44" secondAttribute="centerX" constant="-0.5" id="yjk-FT-RjR"/>
                         </constraints>
@@ -131,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="362.57333333333332"/>
+            <point key="canvasLocation" x="162" y="362"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mTW-vz-SZ2">
@@ -160,10 +169,19 @@
                     <view key="view" contentMode="scaleToFill" id="1rk-xm-bQR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Simple application for the up-to-date information about forecast." translatesAutoresizingMaskIntoConstraints="NO" id="Wdc-Kt-Q1w">
+                                <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="yKZ-4X-Jrr">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="h3E-Pk-L4E">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="h3E-Pk-L4E">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="YZ9-7f-bdT" id="Rb1-Np-89n"/>
                             </connections>
